@@ -1,0 +1,24 @@
+fidelity_contract:
+  version: 1
+  objective: null
+  authorised_target: null
+  source_anchors: []
+  acceptance_criteria: []
+  mutable_paths: []
+  protected_paths: []
+  immutable:
+    - user_intent
+    - runtime_instruction_hierarchy
+    - permissions
+    - evaluator_and_holdout_integrity
+    - promotion_authority
+    - rollback_and_failure_history
+  promotion_authority: null
+  rollback_target: null
+  budget:
+    cycle_cap: 1
+    candidate_cap: 3
+    max_calls: null
+    max_seconds: null
+  unresolved_source_conflicts: []
+  complete: false

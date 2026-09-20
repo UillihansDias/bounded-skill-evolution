@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "target": "",
+  "objective": "",
+  "source_anchors": [],
+  "parent": "",
+  "rollback_target": "",
+  "decision": "inconclusive",
+  "reason": "Initial scaffold; measurements not yet recorded.",
+  "contract": {
+    "mutable_paths": [],
+    "protected_paths": [],
+    "acceptance_criteria": [],
+    "cycle_cap": 1,
+    "max_calls": 0,
+    "max_seconds": 0,
+    "unresolved_conflicts": [],
+    "metric": "",
+    "direction": "higher",
+    "min_gain": null,
+    "candidate_cap": 3,
+    "constraints": [],
+    "consequential": false
+  },
+  "cycle": 1,
+  "baseline": {
+    "metric": "",
+    "value": null,
+    "evidence": ""
+  },
+  "candidates": [],
+  "gates": [],
+  "selected_candidate": null,
+  "lineage": [],
+  "rejected_patterns": [],
+  "meta_evolution": {
+    "policy_version": "m000",
+    "history": [],
+    "successful_edit_families": [],
+    "unsuccessful_edit_families": []
+  },
+  "publication": {
+    "authorised": false,
+    "authority_reference": "",
+    "receipt": "",
+    "revision": ""
+  },
+  "usage": {
+    "calls": 0,
+    "seconds": 0
+  },
+  "unknown_fields": [],
+  "failure_classes": [],
+  "lessons": [],
+  "evidence": [],
+  "historical_versions": [],
+  "metrics": {
+    "capability": [],
+    "fidelity": [],
+    "regressions": [],
+    "cost": [],
+    "latency": [],
+    "tool_calls": [],
+    "recursion_depth": [],
+    "distributional_quality": []
+  },
+  "successor_state_notes": {
+    "delta": "",
+    "follow_up_validation": [],
+    "recursion_allowed": false
+  }
+}

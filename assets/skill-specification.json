@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "name": "bounded-skill-evolution",
+  "entrypoint": "SKILL.md",
+  "scope": "Reusable skill/scaffold refinement; not model-weight training",
+  "modes": [
+    "review",
+    "ordinary",
+    "meta"
+  ],
+  "routing_reference": "references/routing.md",
+  "steps": [
+    {
+      "id": 1,
+      "action": "route_and_contract",
+      "done": "authorised target, sources, objective, scope, acceptance and budgets recorded"
+    },
+    {
+      "id": 2,
+      "action": "freeze_baseline",
+      "done": "parent and evidence pinned, rollback recorded"
+    },
+    {
+      "id": 3,
+      "action": "diagnose_generate",
+      "done": "bounded diverse candidates with falsifiers"
+    },
+    {
+      "id": 4,
+      "action": "isolate_evaluate",
+      "done": "matched comparisons with valid independent evidence"
+    },
+    {
+      "id": 5,
+      "action": "decide_validate",
+      "done": "report validated and evidence reviewed; publication separately authorised"
+    },
+    {
+      "id": 6,
+      "action": "preserve_recurse_recover",
+      "done": "lineage and stopped/next state recorded"
+    }
+  ],
+  "defaults": {
+    "cycle_cap": 1,
+    "explicit_iteration_without_cap": 3,
+    "candidate_cap": 3,
+    "auto_publish": false,
+    "auto_schedule": false
+  },
+  "hard_gates": [
+    "integrity",
+    "fidelity",
+    "regression",
+    "gain",
+    "independence"
+  ],
+  "conditional_gates": [
+    "holdout",
+    "adversarial",
+    "distribution",
+    "efficiency"
+  ],
+  "decisions": [
+    "review",
+    "reject",
+    "inconclusive",
+    "eligible",
+    "promoted"
+  ],
+  "required_behaviours": {
+    "source_conflicts": "record_without_invented_precedence",
+    "ambiguity": "resolve_from_sources_or_ask_only_consequential_missing_choice",
+    "positive_framing": "conditional_action_output_check",
+    "threat_mechanics": "only_documented_trigger",
+    "evaluator_failure": "inconclusive_not_candidate_defect",
+    "meta": "multiple_distinct_prior_cases",
+    "publication": "host_mechanism_with_receipt_and_revision",
+    "rollback": "authorised_host_revision_check",
+    "scripts_prove": "report_consistency_not_real_world_evidence"
+  },
+  "report_template": "assets/template.json",
+  "report_validator": "scripts/validate-report.py",
+  "test_commands": [
+    "python3 -B scripts/self-test.py",
+    "node scripts/tests/hook.test.js"
+  ],
+  "dependencies": {
+    "python": ">=3.10",
+    "shell": "bash",
+    "optional_hook_tests": "node"
+  },
+  "limitations": [
+    "No built-in OS sandbox",
+    "No model invocation/evaluation backend",
+    "No automatic publisher or rollback executor",
+    "Live host integration must be verified separately"
+  ]
+}
